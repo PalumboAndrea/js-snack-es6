@@ -1,40 +1,87 @@
 /*
-1.** Creare un oggetto che descriva una studentessa o uno studente, con le seguenti proprietà: `nome`, `cognome` e `età`.
-2.** Stampare a schermo attraverso un ciclo `for-in` tutte le proprietà dell'oggetto.
-3. Creare un array di oggetti di studenti (ossìa oggetti con le proprietà sopra descritte) e mostriamoli.
- */
+   Crea un array composto da 10 automobili.
+   Ogni oggetto automobile avrà le seguenti proprietà: marca, modello e alimentazione (benzina, diesel, gpl, elettrico, metano).
+
+   Dividi le automobili in 3 array separati: nel primo array solo le auto a benzina, nel secondo solo le auto a diesel, nel terzo il resto delle auto.
+   Infine stampa separatamente i 3 array.
+*/
 
 
-const student = {
-    name : 'Andrea',
-    surname : 'Palumbo',
-    age : 24
+const cars = [
+    {
+        marca: 'pippo',
+        modello: 'pluto',
+        alimentazione: 'benzina',
+    },
+    {
+        marca: 'pippo',
+        modello: 'pluto',
+        alimentazione: 'benzina',
+    },
+    {
+        marca: 'pippo',
+        modello: 'pluto',
+        alimentazione: 'diesel',
+    },
+    {
+        marca: 'pippo',
+        modello: 'pluto',
+        alimentazione: 'diesel',
+    },
+    {
+        marca: 'pippo',
+        modello: 'pluto',
+        alimentazione: 'gpl',
+    },
+    {
+        marca: 'pippo',
+        modello: 'pluto',
+        alimentazione: 'elettrico',
+    },
+    {
+        marca: 'pippo',
+        modello: 'pluto',
+        alimentazione: 'metano',
+    },
+    {
+        marca: 'pippo',
+        modello: 'pluto',
+        alimentazione: 'diesel',
+    },
+    {
+        marca: 'pippo',
+        modello: 'pluto',
+        alimentazione: 'benzina',
+    },
+    {
+        marca: 'pippo',
+        modello: 'pluto',
+        alimentazione: 'diesel',
+    }
+]
+
+
+
+
+
+const benzina = [];
+const diesel = [];
+const varie = [];
+
+for ( i=0; i<cars.length; i++){
+    if (cars[i].alimentazione == 'benzina'){
+        benzina.push(cars[i]);
+    } else if (cars[i].alimentazione == 'diesel'){
+        diesel.push(cars[i]);
+    } else {
+        diesel.push(varie[i]);
+    }
 }
+console.log(benzina);
+console.log(diesel);
+console.log(varie);
 
-for (let key in student) {
-    console.log(key, ' => ', student[key]);
-}
 
-const students = [
-    {
-        name : 'Andrea',
-        surname : 'Palumbo',
-        age : 24
-    },
-    {
-        name : 'Andrea',
-        surname : 'Palumbo',
-        age : 24
-    },
-    {
-        name : 'Andrea',
-        surname : 'Palumbo',
-        age : 24
-    },
-
-];
-
-console.log(students);
 
 
 
