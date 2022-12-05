@@ -15,11 +15,29 @@ for (let key in student) {
     console.log(key, ' => ', student[key]);
 }
 
-const students = {
-    student
-}
+const students = [
+    {
+        name : 'Andrea',
+        surname : 'Palumbo',
+        age : 24
+    },
+    {
+        name : 'Andrea',
+        surname : 'Palumbo',
+        age : 24
+    },
+    {
+        name : 'Andrea',
+        surname : 'Palumbo',
+        age : 24
+    },
 
-console.log(student);
+];
+
+console.log(students);
+
+
+
 
 
 
