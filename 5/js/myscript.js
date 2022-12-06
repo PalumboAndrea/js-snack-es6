@@ -10,52 +10,52 @@ const people = [
     {
         name: 'andrea',
         surname: 'palumbo',
-        age: '24',
+        age: 24,
     },
     {
         name: 'alessandro',
         surname: 'giovannello',
-        age: '29',
+        age: 29,
     },
     {
         name: 'stefano',
         surname: 'pippolardo',
-        age: '20',
+        age: 20,
     },
     {
         name: 'giovanni',
         surname: 'lappolo',
-        age: '35',
+        age: 17,
     },
     {
         name: 'gianna',
         surname: 'gina',
-        age: '24',
+        age: 24,
     },
     {
         name: 'chiara',
         surname: 'revina',
-        age: '50',
+        age: 15,
     },
     {
         name: 'sofia',
         surname: 'rifina',
-        age: '34',
+        age: 34,
     },
     {
         name: 'rosa',
         surname: 'gilore',
-        age: '43',
+        age: 43,
     },
     {
         name: 'cristina',
         surname: 'revina',
-        age: '30',
+        age: 10,
     },
     {
         name: 'angelo',
         surname: 'gino',
-        age: '48',
+        age: 48,
     },
 ]
 
@@ -72,7 +72,9 @@ function canIDrive (age){
 console.log(canIDrive(20));
 
 
+const info = people.map((person) => person.name + ' ' + person.surname + ' ' + canIDrive(person.age));
 
+console.log(info);
 
 
 
