@@ -69,10 +69,7 @@ function canIDrive (age){
     return answer;
 }
 
-console.log(canIDrive(20));
-
-
-const info = people.map((person) => person.name + ' ' + person.surname + ' ' + canIDrive(person.age));
+const info = people.map((person) => person.name.toUpperCase() + ' ' + person.surname.toUpperCase() + ' --> ' + canIDrive(person.age));
 
 console.log(info);
 
