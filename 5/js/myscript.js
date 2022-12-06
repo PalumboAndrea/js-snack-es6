@@ -1,52 +1,75 @@
 /*
-Crea un array di oggetti che rappresentano degli animali.
-Ogni animale ha un nome, una famiglia e una classe.
-Es:
+Crea un array di oggetti che rappresentano delle persone.
+Ogni persona ha un nome, un cognome e un'età, creiamone almeno una decina.
 
-[
-{ nome: 'leone', famiglia: 'felidi', classe: 'mammiferi' },
-{ nome: 'cane', famiglia: 'canidi', classe: 'mammiferi' },
-{ nome: 'gallina', famiglia: 'fasianidi', classe: 'uccelli' },
-]
-
-Crea un nuovo array con la lista dei mammiferi.
-Bonus 1 : trasforma ogni valore di ogni animale in tutto maiuscolo tranne la prima lettera,
-tipo  leone => lEONE, canidi => cANIDI
+Crea quindi un nuovo array inserendo, per ogni persona,
+una frase con il nome e cognome e l'indicazione se può guidare, in base all'età.
 */
 
-const animals = [
+const people = [
     {
-        nome: 'leone',
-        famiglia: 'felidi',
-        classe: 'mammiferi',
+        name: 'andrea',
+        surname: 'palumbo',
+        age: '24',
     },
     {
-        nome: 'cane',
-        famiglia: 'canidi',
-        classe: 'mammiferi',
+        name: 'alessandro',
+        surname: 'giovannello',
+        age: '29',
     },
     {
-        nome: 'gallina',
-        famiglia: 'fasianidi',
-        classe: 'uccelli',
+        name: 'stefano',
+        surname: 'pippolardo',
+        age: '20',
     },
     {
-        nome: 'balena',
-        famiglia: 'felidi',
-        classe: 'pesci',
+        name: 'giovanni',
+        surname: 'lappolo',
+        age: '35',
     },
     {
-        nome: 'canguro',
-        famiglia: 'marsupiali',
-        classe: 'mammiferi',
+        name: 'gianna',
+        surname: 'gina',
+        age: '24',
+    },
+    {
+        name: 'chiara',
+        surname: 'revina',
+        age: '50',
+    },
+    {
+        name: 'sofia',
+        surname: 'rifina',
+        age: '34',
+    },
+    {
+        name: 'rosa',
+        surname: 'gilore',
+        age: '43',
+    },
+    {
+        name: 'cristina',
+        surname: 'revina',
+        age: '30',
+    },
+    {
+        name: 'angelo',
+        surname: 'gino',
+        age: '48',
     },
 ]
 
-const mammiferi = animals.filter((numero) => (numero.classe=='mammiferi'));
-console.log(mammiferi);
+function canIDrive (age){
+    let answer;
+    if(age>=18){
+        answer = 'You can drive';
+    } else {
+        answer = 'You can not drive!';
+    }
+    return answer;
+}
 
-const upperCase = animals.map((numero) => numero.nome[0] + numero.nome.slice(1).toUpperCase());
-console.log(upperCase);
+console.log(canIDrive(20));
 
 
 
